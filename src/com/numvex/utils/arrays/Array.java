@@ -7,15 +7,14 @@
  *  Array test = new Array(Types.STRING , "ll","bb",...)
  */
 
-package com.numvex; 
-import com.numvex.utils.Types;
+package com.numvex.arrays;
 
+import com.numvex.utils.Types;
 
 public class Array<T> {
 
     private final Object[] data;
-    private final String type;
-    private final size;
+    private final String type;private final size;
 
     private final String[] allowed_types = Types.SUPPORTED_TYPES;
 
@@ -30,4 +29,6 @@ public class Array<T> {
                 Types.ElementTypeError();
             }
         }
+        // add data
+        this.data = elements;
     }
