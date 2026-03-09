@@ -22,7 +22,7 @@ public class Array<T> {
     public Array(String Type , Object ..elements){
         if (!Types.isAllowed(Type)){
             throw new IllegalArgumentException("Unsupported type: \"" + type + "\". " +
-                "Supported types:" + Types.getSupportedTypes() + "
+                "Supported types:" + Types.getSupportedTypes() + ""
             );
         }
     }
