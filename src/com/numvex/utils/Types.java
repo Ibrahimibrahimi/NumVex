@@ -38,6 +38,9 @@ public final class Types {
         throw new IllegalArgumentException("Unsupported type: \"" + type + "\". " +
                 "Supported types:" + Types.getSupportedTypes() + "");
     }
+    public static void ElementTypeError(String type){
+
+    }
 
     public static boolean CheckType(Object element, String type) {
         switch (type) {
