@@ -20,9 +20,12 @@ public class Array<T> {
     private final String[] allowed_types = Types.SUPPORTED_TYPES;
 
     public Array(String Type , Object ..elements){
-        
+        // if not a supported type
         if (!Types.isAllowed(Type)){
             Types.TypeError(Type);
         }
-        // add data
+        // check for elements types : all should be the same as the passed 'type' argument
+        for(int i = 0 ; i < elements.length;i++){
+            
+        }
     }
