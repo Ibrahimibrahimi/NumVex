@@ -1,3 +1,4 @@
+package com.numvex;
 
 /* 
     example : NdArray<String> example = new NdArray<String>(6); // this create a 6 dimensions array
