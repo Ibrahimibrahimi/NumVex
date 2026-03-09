@@ -1,2 +1,3 @@
 - complete 'ElementTypeError' in Types.java
 - handle n-Dimension arrays
+- create functions 'add(element)' and 'remove(element)' in the Array.java class
