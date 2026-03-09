@@ -14,11 +14,12 @@ import com.numvex.utils.Types;
 public class Array<T> {
 
     private final Object[] data;
-    private final String type;private final size;
+    private final String type;
+    private final int size;
 
     private final String[] allowed_types = Types.SUPPORTED_TYPES;
 
-    public Array(String Type , Object ..elements){
+    public Array(String Type , Object ...elements){
         // if not a supported type
         if (!Types.isAllowed(Type)){
             Types.TypeError(Type);
