@@ -4,7 +4,9 @@ public final class Types {
     public static final String DOUBLE = "double",
             STRING = "string",
             INT = "integer",
-            BOOLEAN = "boolean";
+            BOOLEAN = "boolean",
+            FLOAT = "float",
+            LONG = "long";
     public static final String[] SUPPORTED_TYPES = {
             Types.DOUBLE,
             Types.INT,
@@ -32,9 +34,27 @@ public final class Types {
         return output;
     }
 
-    public static TypeError(String type){
+    public static void TypeError(String type) {
         throw new IllegalArgumentException("Unsupported type: \"" + type + "\". " +
-                "Supported types:" + Types.getSupportedTypes() + ""
-            );
+                "Supported types:" + Types.getSupportedTypes() + "");
+    }
+
+    public static boolean CheckType(Object element, String type) {
+        switch (type) {
+            case Types.INT:
+                return element instanceof Integer;
+            case Types.DOUBLE:
+                return element instanceof Double;
+            case Types.FLOAT:
+                return element instanceof Float;
+            case Types.LONG:
+                return element instanceof Long;
+            case Types.STRING:
+                return element instanceof String;
+            case Types.BOOLEAN:
+                return element instanceof Boolean;
+            default:
+                return false;
+        }
     }
 }
