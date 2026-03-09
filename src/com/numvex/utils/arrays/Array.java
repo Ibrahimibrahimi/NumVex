@@ -26,6 +26,8 @@ public class Array<T> {
         }
         // check for elements types : all should be the same as the passed 'type' argument
         for(int i = 0 ; i < elements.length;i++){
-            
+            if (!Types.CheckType(elements[i] , Type)){
+                Types.ElementTypeError();
+            }
         }
     }
