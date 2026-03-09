@@ -19,5 +19,10 @@ public class Array<T> {
 
     private final String[] allowed_types = Types.SUPPORTED_TYPES;
 
-    public Array()
+    public Array(String Type , Object ..elements){
+        if (!Types.isAllowed(Type)){
+            throw new IllegalArgumentException("Unsupported type: \"" + type + "\". " +
+                "Supported types:" + Types.getSupportedTypes() + "
+            );
+        }
     }
