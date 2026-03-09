@@ -1,4 +1,3 @@
-package com.numvex.tests;
 
 import com.numvex.Array;
 import com.numvex.typing.Types;
